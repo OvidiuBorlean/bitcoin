@@ -20,7 +20,10 @@ The application is deployed as a container, during the build process the code is
 
 <a id="item-two"></a>
 ### Prerequisites
-First item content goes here
+- Azure CLI
+- Docker Engine
+- kubelet
+  
 
 <a id="item-three"></a>
 ### Implementation
@@ -28,7 +31,12 @@ Second item content goes here
 
 <a id="item-four"></a>
 ### What can be done better
-Second item content goes here
+- Adding TLS support to Nginx Ingress controller by appending the TLS section in Ingress manifest
+- Implementing the net/http Listener in goroutines to adapt to a higher number of requests
+- Possible bug/race condition avoiding at the changing of the index.html file. If there is a http request in same time with an update operation it can trigger an error.
+- Frontend workout
+- Using Go template implementation for improving the Web Frontend
+- Save data localy to have an historical pattern
 
 <a id="item-five"></a>
 ### Final words
