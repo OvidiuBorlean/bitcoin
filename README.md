@@ -13,7 +13,10 @@
 <!-- headings -->
 <a id="item-one"></a>
 ### About Bitcoin Monitor
-Hello world content goes here
+
+Project Bitcoin Monitor is a microservices implementation of an application that can provide a realtime monitor for the Bitcoin values. It is implemented in Golang using the net/http library for implementing the web server connectivity.
+By using a go routine that is running in parallel with the main function, the Bitcoin value is automatically update at specific time interval, default of 10 seconds, and based on the iteration value (default is 3 times), it calculate the average value. 
+The application is deployed as a container, during the build process the code is compiled and the tagged image is pushed in a private ACR Registry. Also, the image will automatically expose the port 8080.
 
 <a id="item-two"></a>
 ### Prerequisites
