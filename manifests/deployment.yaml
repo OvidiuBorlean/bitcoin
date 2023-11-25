@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: btc
+  name: testovidiu
   labels:
-    app: btc
+    app: testovidiu
   namespace: bitcoin
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: btc
+      app: testovidiu
   template:
     metadata:
       labels:
-        app: btc
+        app: testovidiu
     spec:
       containers:
-        - name: btc
-          image: sslovidiu.azurecr.io/image-workflow-1700910522881:latest
+        - name: testovidiu
+          image: sslovidiu.azurecr.io/image-workflow-1700911275991:latest
           ports:
             - containerPort: 8080
