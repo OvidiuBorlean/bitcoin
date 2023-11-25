@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: btcmonitor
+  name: btc
   labels:
-    app: btcmonitor
+    app: btc
   namespace: bitcoin
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: btcmonitor
+      app: btc
   template:
     metadata:
       labels:
-        app: btcmonitor
+        app: btc
     spec:
       containers:
-        - name: btcmonitor
-          image: sslovidiu.azurecr.io/bitcoinmonotor:latest
+        - name: btc
+          image: sslovidiu.azurecr.io/image-workflow-1700910522881:latest
           ports:
             - containerPort: 8080
