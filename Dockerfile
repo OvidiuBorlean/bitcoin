@@ -1,13 +1,7 @@
-FROM golang:1.19
-ENV PORT 8080
+FROM golang
+RUN mkdir /app
+ADD ./get.go /app
+WORKDIR /app
 EXPOSE 8080
-
-WORKDIR /go/src/app
-COPY . .
-
-ARG GO111MODULE=off
-RUN go get -d -v ./...
-RUN go build -v -o app ./...
-RUN mv ./app /go/bin/
-
-CMD ["app"]
+RUN go build -o main ./get.go
+CMD ["/app/main"]
